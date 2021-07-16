@@ -58,7 +58,14 @@ scrape_configs:
     scrape_interval: 5s
 
     static_configs:
-         - targets: ['192.168.1.37:9100']
+         - targets: ['192.168.1.36:9100']
+#  - job_name: 'node1'
+#
+#    # Override the global default and scrape targets from this job every 5 seconds.
+#    scrape_interval: 5s
+#    metrics_path: /ADC/node1.json
+#    static_configs:
+ #        - targets: ['nosqldata-43a40-default-rtdb.firebaseio.com']
 #  - job_name: 'pushgateway'
 #    scrape_interval: 10s
 #    dns_sd_configs:
