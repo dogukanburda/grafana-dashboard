@@ -2,21 +2,14 @@
 grafana.dogukankefeli.tech {
   # grafana:3000 is the docker container running the grafana application
   # in our case it's exposed on port 3000
-  reverse_proxy node-app:3000  {
+  reverse_proxy grafana:3000  {
     header_down Strict-Transport-Security max-age=31536000;
    }
 }
 prom.dogukankefeli.tech {
   # prometheus:9090 is the docker container running the grafana application
   # in our case it's exposed on port 3000
-  reverse_proxy node-app:9090  {
-    header_down Strict-Transport-Security max-age=31536000;
-   }
-}
-grafana.dogukankefeli.tech {
-  # ghost:2368 is the docker container running the grafana application
-  # in our case it's exposed on port 3000
-  reverse_proxy node-app:2368  {
+  reverse_proxy prometheus:9090  {
     header_down Strict-Transport-Security max-age=31536000;
    }
 }
